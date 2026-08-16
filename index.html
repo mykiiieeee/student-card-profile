@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-header {
+            width: 100%;
+            max-width: 320px;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-size: 1.8rem;
+            color: #222;
+            margin: 0;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .box {
+            border: 2px solid #333;
+            border-radius: 16px;
+            /* Creates the rounded box corners */
+            padding: 16px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-name {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            text-align: center;
+            color: #111;
+        }
+
+        .student-info {
+            margin: 6px 0;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .box-1 {
+            background-color: #b1b5d6;
+            /* Muted Purple */
+        }
+
+        .box-2 {
+            background-color: #dfb2bc;
+            /* Soft Pink */
+        }
+
+        .box-3 {
+            background-color: #a3c9e8;
+            /* Soft Blue */
+        }
+
+        .box-4 {
+            background-color: #b5e3b8;
+            /* Mint Green */
+        }
+
+        .box-5 {
+            background-color: #fae3b4;
+            /* Pastel Yellow */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>Student Profile Card</h1>
+    </header>
+
+    <main class="box-container">
+        <div class="box box-1">
+            <h2 class="student-name">Shane</h2>
+            <p class="student-info"><strong>Student ID:</strong> 13568431</p>
+            <p class="student-info"><strong>Program:</strong> BSIT</p>
+        </div>
+
+        <div class="box box-2">
+            <h2 class="student-name">Shiella</h2>
+            <p class="student-info"><strong>Student ID:</strong> 13541298</p>
+            <p class="student-info"><strong>Program:</strong> BSIT</p>
+        </div>
+
+        <div class="box box-3">
+            <h2 class="student-name">Charmaine</h2>
+            <p class="student-info"><strong>Student ID:</strong> 14164832</p>
+            <p class="student-info"><strong>Program:</strong> BSIT</p>
+        </div>
+
+        <div class="box box-4">
+            <h2 class="student-name">Howell</h2>
+            <p class="student-info"><strong>Student ID:</strong> 16657832</p>
+            <p class="student-info"><strong>Program:</strong> BSIT</p>
+        </div>
+
+        <div class="box box-5">
+            <h2 class="student-name">Jed</h2>
+            <p class="student-info"><strong>Student ID:</strong> 13157854</p>
+            <p class="student-info"><strong>Program:</strong> BSIT</p>
+        </div>
+    </main>
+
+</body>
+
+</html>
