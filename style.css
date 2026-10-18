@@ -1,0 +1,172 @@
+:root {
+  --bg-color: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --card-border: rgba(0, 0, 0, 0.06);
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --card-shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.08);
+  --input-bg: #ffffff;
+  --input-border: #cbd5e1;
+  --btn-bg: #ffffff;
+  --btn-border: #cbd5e1;
+
+  --card-1: #e2e4f6;
+  --card-2: #f8e1e7;
+  --card-3: #dbeafe;
+  --card-4: #dcfce7;
+  --card-5: #fef3c7;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --card-shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.4);
+  --input-bg: #1e293b;
+  --input-border: #334155;
+  --btn-bg: #1e293b;
+  --btn-border: #334155;
+
+  --card-1: #2a2d48;
+  --card-2: #422832;
+  --card-3: #1e3a5f;
+  --card-4: #143e2a;
+  --card-5: #453517;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-header {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.theme-btn {
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  color: var(--text-main);
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.05);
+}
+
+.sun-icon {
+  display: none;
+}
+
+.moon-icon {
+  display: block;
+}
+
+[data-theme="dark"] .sun-icon {
+  display: block;
+}
+
+[data-theme="dark"] .moon-icon {
+  display: none;
+}
+
+.search-container {
+  width: 100%;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-container input:focus {
+  border-color: #3b82f6;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.card:nth-child(5n + 1) { background-color: var(--card-1); }
+.card:nth-child(5n + 2) { background-color: var(--card-2); }
+.card:nth-child(5n + 3) { background-color: var(--card-3); }
+.card:nth-child(5n + 4) { background-color: var(--card-4); }
+.card:nth-child(5n + 5) { background-color: var(--card-5); }
+
+.student-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.student-info {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.student-info strong {
+  color: var(--text-main);
+}
