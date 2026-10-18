@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
   } else if (prefersDark) {
-    document.documentElement.setAttribute('data-theme', dark);
+    document.documentElement.setAttribute('data-theme', 'dark'); // Fixed: added quotes
   }
 
   themeToggleBtn.addEventListener('click', () => {
